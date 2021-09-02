@@ -33,7 +33,8 @@ client.remove_command('help')
 
 
 
-#-------FUN COMMANDS--------------
+#================FUN COMMANADS================================================================================
+
 @client.command(name='8ball', pass_context=True)
 async def eight_ball(ctx):
     possible_responses = [
@@ -79,6 +80,7 @@ async def serverinfo(ctx):
        embed.set_thumbnail(url=ctx.message.server.icon_url)
        await client.send(embed=embed)
 
+#================TANK STATS COMMANDS================================================================================
 
 def award_string(seq: list) -> str:
     emoji_set = [
@@ -392,7 +394,7 @@ async def acti(ctx):
    
 @client.command(pass_context=True) #DONT FORGET TO CLOSE DATABASE CONNECTIONS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 async def regtank(ctx, *args):
-    mydb = mysql.connector.connect(host="s1.swapdns.com",
+    mydb = mysql.connector.connect(host="",
     user="",
     passwd="",
     database="")
@@ -433,7 +435,7 @@ async def regtank(ctx, *args):
 
 @client.command(pass_context=True) #DONT FORGET TO CLOSE DATABASE CONNECTIONS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 async def updatetank(ctx, *args):
-    mydb = mysql.connector.connect(host="s1.swapdns.com",
+    mydb = mysql.connector.connect(host="",
     user="",
     passwd="",
     database="")
@@ -626,8 +628,19 @@ async def repboard(ctx):
     await ctx.send(embed=embed)
     mydb.commit()
     mycursor.close()
+   
+#================MODERATION===========================================================================
+@client.command(pass_context=True)
+async def clear(ctx, amount=1):
+    if ctx.message.author.server_permissions.manage_messages:
+        channel = ctx.message.channel
+        messages = []
+        async for message in client.logs_from(channel, limit=int(amount)):
+            messages.append(message)
+        await client.delete_messages(messages)
+        await client.send("Messages deleted")
 
-#================EVENTS======================================================
+#================EVENTS================================================================================
 @client.event
 #update DemoTable set Score=Score+1 where Id=3;
 async def on_message(message):
@@ -673,15 +686,6 @@ async def on_message(message):
                 await user.send(f"Tankpit HQ member **{authorname}** has given your tank {tankname} **+ {tankrep} reputation points** for playing honorably on the field")
     await client.process_commands(message)
 
-@client.command(pass_context=True)
-async def clear(ctx, amount=1):
-    if ctx.message.author.server_permissions.manage_messages:
-        channel = ctx.message.channel
-        messages = []
-        async for message in client.logs_from(channel, limit=int(amount)):
-            messages.append(message)
-        await client.delete_messages(messages)
-        await client.send("Messages deleted")
 
 
 client.run(TOKEN)
