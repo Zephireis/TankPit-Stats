@@ -7,5 +7,5 @@ Example:
 
 ![image](https://user-images.githubusercontent.com/25750662/131924683-84c76020-8ed8-4529-a619-67c3338873f9.png)
 
-this is an on going project that I started in 2017 and is my first big python programming project. 
+this is an on going project that I started in 2017 and is my first python programming project. 
 
