@@ -27,7 +27,7 @@ client.remove_command('help')
 # 1. I need to work on in this script is getting rid of repeating code and make functions for it
 # 2. Put lists in a seperate file and grab from there
 # 3. Clean up code.
-# 4. find a better way than using try else chains.
+# 4. find a better way than using try except chains.
 #===========================================================================================================#
 
 
