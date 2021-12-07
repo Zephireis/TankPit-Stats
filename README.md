@@ -1,4 +1,4 @@
-TankPit-Stats uses the applicaion programming interfaces from https://tankpit.com/api and  https://discord.com to use and display players account statistics into a chat channel in discord on a command function written in python.
+TankPit-Stats uses the applicaion programming interfaces (api) from https://tankpit.com/api and  https://discord.com to use and display players account statistics into a chat channel in discord on a command function written in python.
 
 The funtionally includes 
 chat commands to display account information kills, deaths, timeplayed, ect.
