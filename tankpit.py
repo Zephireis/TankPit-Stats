@@ -630,16 +630,25 @@ async def repboard(ctx):
     mydb.commit()
     mycursor.close()
     
- @client.command(pass_context=True)
+@client.command(pass_context=True)
 async def tpmeme(ctx):
-    possible_responses = ['https://cdn.discordapp.com/attachments/311890399767822359/811658887455178803/vagina.JPG', 'https://cdn.discordapp.com/attachments/311890399767822359/921194565799669780/Willow.TP.Birth.jpg', 'https://cdn.discordapp.com/attachments/311890399767822359/921194400284020736/Willow.TP.Drive.jpg', 'https://cdn.discordapp.com/attachments/916839922692939836/921924649284141067/tpmeme.JPG', 'https://cdn.discordapp.com/attachments/311890399767822359/824102210974515200/genracist.png', 'https://media.discordapp.net/attachments/373266757885886465/568281669757566976/image0.jpg', 'https://media.discordapp.net/attachments/311890399767822359/921927383165071410/unknown.png', 'https://cdn.discordapp.com/attachments/798971092529446976/921933698235002920/4njr5e.png', 'https://cdn.discordapp.com/attachments/311890399767822359/921950132667293726/Screenshot_20211215-115649_Discord.jpg', 'https://cdn.discordapp.com/attachments/311890399767822359/922209033375608893/bluntz_facebook_tankpit_pic.png',
-'https://i.imgur.com/hVk9qzS.jpg',
-'https://i.imgur.com/NluSfyL.png',
-'https://media.discordapp.net/attachments/311890399767822359/935598927686807562/rise-of-hitler.jpg',
-'https://cdn.discordapp.com/attachments/311890399767822359/939252552208355429/Screenshot_20220204-121413_Discord.jpg',
-'https://images-ext-2.discordapp.net/external/XeFziP3-PIcb88Wwz1RkOqi0Af2iRMxWQ0hDE_UOg2M/https/i.imgflip.com/652ary.jpg',
-'https://cdn.discordapp.com/attachments/413514088631631874/942900157412962344/forg.JPG',
-'https://cdn.discordapp.com/attachments/311890399767822359/942111855562854440/Screen_Shot_2022-02-12_at_12.36.03_PM.png']
+    possible_responses = ['https://cdn.discordapp.com/attachments/311890399767822359/811658887455178803/vagina.JPG', 
+    'https://cdn.discordapp.com/attachments/311890399767822359/921194565799669780/Willow.TP.Birth.jpg', 
+    'https://cdn.discordapp.com/attachments/311890399767822359/921194400284020736/Willow.TP.Drive.jpg', 
+    'https://cdn.discordapp.com/attachments/916839922692939836/921924649284141067/tpmeme.JPG', 
+    'https://cdn.discordapp.com/attachments/311890399767822359/824102210974515200/genracist.png', 
+    'https://media.discordapp.net/attachments/373266757885886465/568281669757566976/image0.jpg', 
+    'https://media.discordapp.net/attachments/311890399767822359/921927383165071410/unknown.png', 
+    'https://cdn.discordapp.com/attachments/798971092529446976/921933698235002920/4njr5e.png', 
+    'https://cdn.discordapp.com/attachments/311890399767822359/921950132667293726/Screenshot_20211215-115649_Discord.jpg', 
+    'https://cdn.discordapp.com/attachments/311890399767822359/922209033375608893/bluntz_facebook_tankpit_pic.png',
+    'https://i.imgur.com/hVk9qzS.jpg',
+    'https://i.imgur.com/NluSfyL.png',
+    'https://media.discordapp.net/attachments/311890399767822359/935598927686807562/rise-of-hitler.jpg',
+    'https://cdn.discordapp.com/attachments/311890399767822359/939252552208355429/Screenshot_20220204-121413_Discord.jpg',
+    'https://images-ext-2.discordapp.net/external/XeFziP3-PIcb88Wwz1RkOqi0Af2iRMxWQ0hDE_UOg2M/https/i.imgflip.com/652ary.jpg',
+    'https://cdn.discordapp.com/attachments/413514088631631874/942900157412962344/forg.JPG',
+    'https://cdn.discordapp.com/attachments/311890399767822359/942111855562854440/Screen_Shot_2022-02-12_at_12.36.03_PM.png']
     embed = discord.Embed(title=' ', description=' ', color=0x4ec115)
     embed.set_image(url=(random.choice(possible_responses)))
     await ctx.send(embed=embed)
@@ -650,7 +659,8 @@ async def tpmeme2(ctx):
     'https://cdn.discordapp.com/attachments/413514088631631874/944075412013715496/syms.JPG',
     'https://cdn.discordapp.com/attachments/746599290088063028/940444173989994506/unknown.png']
     embed = discord.Embed(title=' ', description=' ', color=0x4ec115)
-    embed.set_image(url=(random.choice(pos
+    embed.set_image(url=(random.choice(possible_responses)))
+    await ctx.send(embed=embed)
    
 #================MODERATION===========================================================================
 @client.command(pass_context=True)
