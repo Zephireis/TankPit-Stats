@@ -1,4 +1,4 @@
-TankPit-Stats uses the TankPit API from https://tankpit.com/api and also usees discord's API at https://discord.com. This project uses those apis to display players account stats and posts it to a discord on command by a user on request. The Project also includes chat commands to display account information such as kills, deaths, timeplayed, TankPit-Stats has a reputation system based on in game performance and saves data to a mySQL database and assigns their discord ID to a tank they register. It also includes moderation and fun commands. 
+TankPit-Stats uses the TankPit API from https://tankpit.com/api and also usees discord's API at https://discord.com. This project uses those API's provided to display players account stats and posts it to a discord on command by a user on request. The Project also includes chat commands to display account information such as kills, deaths, timeplayed, TankPit-Stats has a reputation system based on in game performance and saves data to a mySQL database and assigns their discord ID to a tank they register. It also includes moderation and fun commands. 
 
 
 
